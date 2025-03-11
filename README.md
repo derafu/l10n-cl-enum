@@ -1,6 +1,10 @@
 # Derafu: L10n CL Enum - Chilean Enum Repository
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+![GitHub last commit](https://img.shields.io/github/last-commit/derafu/l10n-cl-enum/main)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/derafu/l10n-cl-enum)
+![GitHub Issues](https://img.shields.io/github/issues-raw/derafu/l10n-cl-enum)
+![Total Downloads](https://poser.pugx.org/derafu/l10n-cl-enum/downloads)
+![Monthly Downloads](https://poser.pugx.org/derafu/l10n-cl-enum/d/monthly)
 
 A PHP repository of chilean enum.
 
