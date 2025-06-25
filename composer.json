@@ -2,12 +2,12 @@
     "name": "derafu/l10n-cl-enum",
     "description": "Derafu: L10n CL Enum - Chilean Enum Repository",
     "type": "library",
-    "homepage": "https://derafu.org/l10n-cl-enum",
+    "homepage": "https://www.derafu.dev/docs/standards/l10n-cl-enum",
     "license": "MIT",
     "authors": [
         {
             "name": "Esteban De La Fuente Rubio / Derafu",
-            "homepage": "https://www.derafu.org"
+            "homepage": "https://www.derafu.dev"
         }
     ],
     "support": {
