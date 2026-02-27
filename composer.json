@@ -20,10 +20,10 @@
         }
     },
     "require": {
-        "php": "^8.3"
+        "php": "^8.5"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.63",
+        "friendsofphp/php-cs-fixer": "^3.82",
         "phpstan/phpstan": "^1.12"
     },
     "scripts": {
