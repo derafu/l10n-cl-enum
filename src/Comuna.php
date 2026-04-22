@@ -20,20 +20,17 @@ use RuntimeException;
 enum Comuna: int
 {
     case IQUIQUE = 1101;
-    case CAMIÑA = 1102;
-    case COLCHANE = 1103;
-    case HUARA = 1104;
-    case PICA = 1105;
-    case POZO_ALMONTE = 1106;
+    case CAMIÑA = 1402;
+    case COLCHANE = 1403;
+    case HUARA = 1404;
+    case PICA = 1405;
+    case POZO_ALMONTE = 1401;
     case ALTO_HOSPICIO = 1107;
-    case CAMARONES = 1202;
-    case PUTRE = 1301;
-    case GENERAL_LAGOS = 1302;
     case ANTOFAGASTA = 2101;
     case MEJILLONES = 2102;
     case SIERRA_GORDA = 2103;
     case TALTAL = 2104;
-    case MARIA_ELENA = 2105;
+    case MARIA_ELENA = 2302;
     case CALAMA = 2201;
     case OLLAGUE = 2202;
     case SAN_PEDRO_DE_ATACAMA = 2203;
@@ -67,9 +64,9 @@ enum Comuna: int
     case CONCON = 5103;
     case JUAN_FERNANDEZ = 5104;
     case PUCHUNCAVI = 5105;
-    case QUILPUE = 5106;
+    case QUILPUE = 5801;
     case QUINTERO = 5107;
-    case VILLA_ALEMANA = 5108;
+    case VILLA_ALEMANA = 5804;
     case VIÑA_DEL_MAR = 5109;
     case ISLA_DE_PASCUA = 5201;
     case LOS_ANDES = 5301;
@@ -85,9 +82,9 @@ enum Comuna: int
     case LA_CALERA = 5502;
     case HIJUELAS = 5503;
     case LA_CRUZ = 5504;
-    case LIMACHE = 5505;
+    case LIMACHE = 5802;
     case NOGALES = 5506;
-    case OLMUE = 5507;
+    case OLMUE = 5803;
     case SAN_ANTONIO = 5601;
     case ALGARROBO = 5602;
     case CARTAGENA = 5603;
@@ -181,7 +178,7 @@ enum Comuna: int
     case CURANILAHUE = 8205;
     case LOS_ALAMOS = 8206;
     case TIRUA = 8207;
-    case HUALPEN = 8208;
+    case HUALPEN = 8112;
     case LOS_ANGELES = 8301;
     case ANTUCO = 8302;
     case CABRERO = 8303;
@@ -279,18 +276,10 @@ enum Comuna: int
     case FUTALEUFU = 10402;
     case HUALAIHUE = 10403;
     case PALENA = 10404;
-    case VALDIVIA = 10501;
-    case CORRAL = 10502;
-    case FUTRONO = 10503;
-    case LA_UNION = 10504;
-    case LAGO_RANCO = 10505;
-    case LANCO = 10506;
-    case LOS_LAGOS = 10507;
-    case MAFIL = 10508;
-    case MARIQUINA = 10509;
-    case PAILLACO = 10510;
-    case PANGUIPULLI = 10511;
-    case RIO_BUENO = 10512;
+    case LA_UNION = 14201;
+    case FUTRONO = 14202;
+    case LAGO_RANCO = 14203;
+    case RIO_BUENO = 14204;
     case COIHAIQUE = 11101;
     case LAGO_VERDE = 11102;
     case AISEN = 11201;
@@ -364,7 +353,19 @@ enum Comuna: int
     case ISLA_DE_MAIPO = 13603;
     case PADRE_HURTADO = 13604;
     case PENAFLOR = 13605;
+    case VALDIVIA = 14101;
+    case CORRAL = 14102;
+    case LANCO = 14103;
+    case LOS_LAGOS = 14104;
+    case MAFIL = 14105;
+    case MARIQUINA = 14106;
+    case PAILLACO = 14107;
+    case PANGUIPULLI = 14108;
+
     case ARICA = 15101;
+    case CAMARONES = 15102;
+    case PUTRE = 15201;
+    case GENERAL_LAGOS = 15202;
 
     private const GLOSAS = [
         self::IQUIQUE->value => 'Iquique',
@@ -374,9 +375,6 @@ enum Comuna: int
         self::PICA->value => 'Pica',
         self::POZO_ALMONTE->value => 'Pozo Almonte',
         self::ALTO_HOSPICIO->value => 'Alto Hospicio',
-        self::CAMARONES->value => 'Camarones',
-        self::PUTRE->value => 'Putre',
-        self::GENERAL_LAGOS->value => 'General Lagos',
         self::ANTOFAGASTA->value => 'Antofagasta',
         self::MEJILLONES->value => 'Mejillones',
         self::SIERRA_GORDA->value => 'Sierra Gorda',
@@ -627,18 +625,6 @@ enum Comuna: int
         self::FUTALEUFU->value => 'Futaleufú',
         self::HUALAIHUE->value => 'Hualaihué',
         self::PALENA->value => 'Palena',
-        self::VALDIVIA->value => 'Valdivia',
-        self::CORRAL->value => 'Corral',
-        self::FUTRONO->value => 'Futrono',
-        self::LA_UNION->value => 'La Unión',
-        self::LAGO_RANCO->value => 'Lago Ranco',
-        self::LANCO->value => 'Lanco',
-        self::LOS_LAGOS->value => 'Los Lagos',
-        self::MAFIL->value => 'Máfil',
-        self::MARIQUINA->value => 'Mariquina',
-        self::PAILLACO->value => 'Paillaco',
-        self::PANGUIPULLI->value => 'Panguipulli',
-        self::RIO_BUENO->value => 'Río Bueno',
         self::COIHAIQUE->value => 'Coihaique',
         self::LAGO_VERDE->value => 'Lago Verde',
         self::AISEN->value => 'Aisén',
@@ -712,7 +698,22 @@ enum Comuna: int
         self::ISLA_DE_MAIPO->value => 'Isla de Maipo',
         self::PADRE_HURTADO->value => 'Padre Hurtado',
         self::PENAFLOR->value => 'Peñaflor',
+        self::VALDIVIA->value => 'Valdivia',
+        self::CORRAL->value => 'Corral',
+        self::LANCO->value => 'Lanco',
+        self::LOS_LAGOS->value => 'Los Lagos',
+        self::MAFIL->value => 'Máfil',
+        self::MARIQUINA->value => 'Mariquina',
+        self::PAILLACO->value => 'Paillaco',
+        self::PANGUIPULLI->value => 'Panguipulli',
+        self::LA_UNION->value => 'La Unión',
+        self::FUTRONO->value => 'Futrono',
+        self::LAGO_RANCO->value => 'Lago Ranco',
+        self::RIO_BUENO->value => 'Río Bueno',
         self::ARICA->value => 'Arica',
+        self::CAMARONES->value => 'Camarones',
+        self::PUTRE->value => 'Putre',
+        self::GENERAL_LAGOS->value => 'General Lagos',
     ];
 
     /**
