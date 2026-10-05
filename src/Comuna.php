@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Derafu\L10n\Cl\Enum;
 
-use RuntimeException;
+use Derafu\Translation\Exception\Core\TranslatableRuntimeException as RuntimeException;
 
 /**
  * Enum to represent the communes of Chile.
@@ -763,10 +763,10 @@ enum Comuna: int
         $region = Region::tryFrom($regionCode);
 
         if ($region === null) {
-            throw new RuntimeException(sprintf(
-                'Region not found for the commune %s.',
-                $this->getNombre()
-            ));
+            throw new RuntimeException([
+                'Region not found for the commune {commune}.',
+                'commune' => $this->getNombre(),
+            ]);
         }
 
         return $region;
@@ -786,10 +786,10 @@ enum Comuna: int
         $provincia = Provincia::tryFrom($provinciaCode);
 
         if ($provincia === null) {
-            throw new RuntimeException(sprintf(
-                'Province not found for the commune %s.',
-                $this->getNombre()
-            ));
+            throw new RuntimeException([
+                'Province not found for the commune {commune}.',
+                'commune' => $this->getNombre(),
+            ]);
         }
 
         return $provincia;

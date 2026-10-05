@@ -25,13 +25,18 @@
         }
     },
     "require": {
-        "php": "^8.5"
+        "php": "^8.5",
+        "derafu/translation": "dev-main"
     },
     "require-dev": {
         "ext-xdebug": "*",
-        "friendsofphp/php-cs-fixer": "^3.94",
-        "phpstan/phpstan": "^1.12",
-        "phpunit/phpunit": "^11.5"
+        "friendsofphp/php-cs-fixer": "^3.95",
+        "phpstan/phpstan": "^2.2",
+        "phpunit/phpunit": "^13.4",
+        "nikic/php-parser": "^5.9"
+    },
+    "suggest": {
+        "nikic/php-parser": "Required by the tests of the messages of the package (Derafu\\Translation\\Lint reads the code)."
     },
     "scripts": {
         "tests": "XDEBUG_MODE=coverage vendor/bin/phpunit --configuration=phpunit.xml",

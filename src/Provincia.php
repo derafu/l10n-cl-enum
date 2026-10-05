@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace Derafu\L10n\Cl\Enum;
 
-use RuntimeException;
+use Derafu\Translation\Exception\Core\TranslatableRuntimeException as RuntimeException;
 
 /**
  * Enum to represent the provinces of Chile.
@@ -179,10 +179,10 @@ enum Provincia: int
         $region = Region::tryFrom($regionCode);
 
         if ($region === null) {
-            throw new RuntimeException(sprintf(
-                'No region found for the province %s.',
-                $this->getNombre()
-            ));
+            throw new RuntimeException([
+                'No region found for the province {province}.',
+                'province' => $this->getNombre(),
+            ]);
         }
 
         return $region;
